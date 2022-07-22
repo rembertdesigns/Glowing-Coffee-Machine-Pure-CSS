@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 280px;
+    width: 280px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: #74bfc9;
+}
+.top{
+    height: 80px;
+    width: 310px;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    background-color: #188594;
+    border-radius: 10px;
+}
+.btn{
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 25px;
+    background-color: #222;
+    border-radius: 50%;
+}
+.btn::after{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 8px;
+    background-color: #494747;
+    bottom: -9px;
+    left: 8px;
+}
+.btn1{
+    left: 16px;
+}
+.btn2{
+    left: 48px;
+}
+.timer{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    background-color: #494747;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    place-items: center;
+}
+.timer::before{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #222;
+    border-radius: 50%;
+    top: 15px;
+    left: 15px;
+    border: 5px solid #222;
+}
+.timer::after{
+    content: '';
+    position: absolute;
+    background-color: #494747;
+    height: 15px;
+    width: 4px;
+    border-radius: 4px;
+    top: 22px;
+    left: 37px;
+}
+.side_btn{
+    height: 22px;
+    width: 8px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #494747;
+    box-shadow: -10px 0 0 #494747, -20px 0 0 #494747;
+}
+.text{
+    position: absolute;
+    height: 55px;
+    width: 100px;
+    top: 45px;
+    right: 10px;
+}
+p{
+    font-family: sans-serif;
+    font-size: 15px;
+    background-color: #222;
+    color: #74bfc9;
+    text-align: center;
+    padding: 5px 0;
+    animation: glow 1.5s infinite alternate;
+}
+@keyframes glow{
+    0%,18%,22%,25%,53%,57%,100%{
+        text-shadow: 0 0 7px #74bfc9,
+                    0 0 10px #74bfc9,
+                    0 0 21px #74bfc9,
+                    0 0 42px #188594,
+                    0 0 82px #188594,
+                    0 0 92px #188594,
+                    0 0 102px #188594,
+                    0 0 151px #188594;  
+    }
+    20%,24%,55%{
+        text-shadow: none;
+    }
+}
+.mid{
+    height: 150px;
+    width: 95%;
+    position: absolute;
+    background: #74bfc9;
+    top: 80px;
+    left: 8px;
+}
+.mid::before{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 90%;
+    background-color: #494747;
+    bottom: -15px;
+    left: 13px;
+    border-radius: 15px 15px 0 0;
+}
+.box{
+    height: 15px;
+    width: 50px;
+    position: absolute;
+    background-color: #222;
+    top: 0;
+    left: 110px;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 50px;
+    background-color: #222;
+    bottom: -10px;
+    border-radius: 0 0 50% 50%;
+}
+.box::after{
+    content: '';
+    height: 8px;
+    width: 10px;
+    position: absolute;
+    bottom: -18px;
+    background-color: #222;
+    left: 20px;
+}
+.cup{
+    height: 70px;
+    width: 80px;
+    position: absolute;
+    bottom: -15px;
+    left: 95px;
+    background-color: #b3aeae;
+    border-radius: 0 0 20px 20px / 0 0 40px 40px;
+}
+.cup::after{
+    content: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 15px;
+    right: -13px;
+    border: 5px solid #b3aeae;
+}
+.coffee{
+    height: 62px;
+    width: 6px;
+    background-color: #663e36;
+    position: absolute;
+    left: 132px;
+    top: 32px;
+    opacity: 0;
+    animation: pour 4s 4s linear infinite;
+}
+@keyframes pour {
+    0%{
+        height: 0px;
+        opacity: 1;
+    }
+    5%{
+        height: 0px;
+        opacity: 1;
+    }
+    20%{
+        height: 62px;
+        opacity: 1;
+    }
+    95%{
+        height: 62px;
+        opacity: 1;
+    }
+    100%{
+        height: 62px;
+        opacity: 0;
+    }
+}
+.steam{
+    height: 20px;
+    width: 10px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #b3aeae;
+}
+.steam1{
+    opacity: 0;
+    bottom: 50px;
+    left: 95px;
+    animation: steam1 3s 4s linear infinite;
+}
+@keyframes steam1{
+    0%{
+        bottom: 20px;
+        opacity: 0;
+    }
+    40%{
+        bottom: 50px;
+        opacity: 0.5;
+    }
+    80%{
+        bottom: 80px;
+        opacity: 0.3;
+    }
+    100%{
+        bottom: 80px;
+        opacity: 0;
+    }
+}
+.steam2{
+    opacity: 0;
+    bottom: 70px;
+    left: 118px;
+    animation: steam2 3s 5s linear infinite;
+}
+@keyframes steam2{
+    0%{
+        bottom: 40px;
+        opacity: 0;
+    }
+    40%{
+        bottom: 70px;
+        opacity: 0.5;
+    }
+    80%{
+        bottom: 80px;
+        opacity: 0.3;
+    }
+    100%{
+        bottom: 80px;
+        opacity: 0;
+    }
+}
+.steam3{
+    opacity: 0;
+    bottom: 65px;
+    right: 118px;
+    animation: steam2 3s 6s linear infinite;
+}
+.steam4{
+    opacity: 0;
+    bottom: 50px;
+    right: 102px;
+    animation: steam1 3s 5s linear infinite;
+}
+.bottom{
+    height: 60px;
+    width: 330px;
+    position: absolute;
+    bottom: -25px;
+    left: -25px;
+    background: #222;
+    border-radius: 10px;
+}
+.base{
+    height: 10px;
+    width: 120px;
+    background-color: #6b6866;
+    position: relative;
+    left: 105px;
+    top: 25px;
+    border-radius: 20px;
+}
+.stand{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #222;
+    bottom: -10px;
+    left: 30px;
+    border-radius: 0 0 5px 5px;
+}
+.stand::after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #222;
+    left: 245px;
+    border-radius: 0 0 5px 5px;
+}
+.bottom::after{
+    content: '';
+    position: absolute;
+    width: 300%;
+    border-top: 5px solid #000;
+    top: 70px;
+    left: -325px;
+    box-shadow: rgba(0,0,0,0.4) 0px 5px,
+                rgba(0,0,0,0.3) 0px 10px,
+                rgba(0,0,0,0.2) 0px 15px,
+                rgba(0,0,0,0.1) 0px 20px,
+                rgba(0,0,0,0.05) 0px 25px;
+}
